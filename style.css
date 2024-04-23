@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    color: #333;
+}
+
+.taskContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.individualTask{
+    font-size: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: padding-left 0.3s ease-in-out;
+    padding-left: 0;
+}
+
+.individualTask:last-child {
+    border-bottom: none;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.removeButton {
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    transform: scale(0);
+}
+
+.individualTask:hover {
+    padding-left: 60px;
+}
+
+.individualTask:hover .removeButton {
+    visibility: visible;
+    transform: scale(1);
+}
+
+.taskInput {
+    width: 60%; 
+    padding: 10px;
+    font-size: 18px; 
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.addButton, .clearButton {
+    width: 150px; 
+    transition: none;
+}
